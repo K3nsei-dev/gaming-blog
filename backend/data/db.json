@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "email": "jeandreross@gmail.com",
+      "password": "$2a$10$Y2YVJZWiegJ5dgY2OtaFUO0br6wDWtOCMHs8eRRbyEXzpkgTC4eBC",
+      "username": "K3nsei-dev",
+      "fullName": "Jeandre Awood",
+      "displayPicture": "https://i.pinimg.com/originals/90/94/ab/9094ab3b31273c5d82447785b9ea42a0.jpg",
+      "id": 1
+    },
+    {
+      "email": "jessenterblanche@gmail.com",
+      "password": "$2a$10$FHKyfaToap6GB/uIDU1Q.eQyQ7JFdwONLA/G98SK08yCUOFXhEf2i",
+      "username": "bigBrain",
+      "fullName": "Jesse Terblanche",
+      "displayPicture": "https://i.pinimg.com/originals/90/94/ab/9094ab3b31273c5d82447785b9ea42a0.jpg",
+      "id": 2
+    }
+  ],
+  "blogs": [
+    {
+      "title": "Welcome To My Gaming Blog",
+      "author": "Jeandre Awood",
+      "image_header": "https://d25yuvogekh0nj.cloudfront.net/2020/12/mw1920_15-Blogs-_-Websites-That-Every-Gaming-Enthusiast-Should-Follow-banner-1250x500.png",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat lorem aliquam quam malesuada, sed congue turpis imperdiet. Nullam vitae sapien finibus, egestas mi eget, volutpat metus. Nunc pulvinar quis enim non laoreet. Vivamus eleifend ex lorem, non dictum neque scelerisque in. Suspendisse potenti. Proin commodo neque ut pellentesque posuere. Maecenas eget erat et quam cursus pharetra. Vestibulum dapibus facilisis nunc a euismod. Donec placerat, tellus in blandit consectetur, purus diam venenatis nisi, rutrum pulvinar sapien massa a quam. Proin nec ultricies libero. Integer scelerisque eros quis ligula gravida, imperdiet condimentum turpis tincidunt. Integer tincidunt felis nibh, eu tincidunt justo hendrerit nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc scelerisque vel ante nec dictum. Vestibulum et magna varius, finibus erat sed, porttitor eros. Suspendisse venenatis bibendum nunc at ornare. Etiam at ex magna. Suspendisse vestibulum, eros vel feugiat hendrerit, magna velit porta felis, nec aliquam diam lacus sit amet lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "tags": "gaming, tech, news",
+      "createdAt": "Fri Oct 29 2021",
+      "updatedAt": null,
+      "id": 1
+    }
+  ],
+  "comments": []
+}
