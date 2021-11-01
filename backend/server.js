@@ -81,7 +81,7 @@ app.use((req, res, next) => {
         
         // adding a comment 
         if (req.method === 'POST' && req.path === '/blogs/:id/comments') {
-            // console.log(req.path, '/blogs/:id/comments');
+            console.log(req.path, 'yeah yeah');
             req.body.createdAt = new Date().toDateString();
             req.body.updatedAt = null;
         }
