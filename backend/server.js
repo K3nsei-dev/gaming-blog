@@ -23,7 +23,7 @@ app.use(auth)
 
 app.use(jsonServer.bodyParser)
 // adding a post 
-app.use((req, res, next) => {
+app.use((req, next) => {
     try {
         // sending an email
         if (req.method === 'POST' && req.path === '/send-email') {
@@ -90,20 +90,6 @@ app.use((req, res, next) => {
         if (req.method === 'PUT' && req.path === '/comments/:id') {
             console.log(req.path, '/comments/:id');
             req.body.updatedAt = new Date().toDateString();
-        }
-         
-        // deleting a comments but this is to return a response when deleting a comment (not working)
-        if (req.method === 'DELETE' && req.path === 'comments/:id') {
-            response = {}
-
-            try {
-                response['message'] = "You successfully deleted the comment"
-                response['status_code'] = 200
-            } catch (err) {
-                response['message'] = err.message
-                response['status_code'] = 500
-            }
-            return response
         }
 
         next()
