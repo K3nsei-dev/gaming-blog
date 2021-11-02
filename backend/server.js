@@ -22,7 +22,7 @@ app.use(auth)
 
 
 app.use(jsonServer.bodyParser)
-// adding a post 
+
 app.use((req, res, next) => {
     try {
         // sending an email
@@ -66,36 +66,23 @@ app.use((req, res, next) => {
             })
         }
 
-        // adding a post 
-        if (req.method === 'POST' && req.path === '/blogs') {
+        // for adding data
+        if (req.method === 'POST') {
                 req.body.createdAt = new Date().toDateString();
                 req.body.updatedAt = null;
         }
 
-        // updating a post 
+        // for updating objects
         if (req.method === 'PUT') {
             if (req.params) {
                 req.body.createdAt = req.body.createdAt;
                 req.body.updatedAt = new Date().toDateString()
             }
         }
-        
-        // adding a comment 
-        if (req.method === 'POST' && req.path === '/blogs/:id/comments') {
-            console.log(req.path, 'yeah yeah');
-            req.body.createdAt = new Date().toDateString();
-            req.body.updatedAt = null;
-        }
-        
-        // editing a comment
-        if (req.method === 'PUT' && req.path === '/comments/:id') {
-            // console.log(req.path, '/comments/:id');
-            req.body.updatedAt = new Date().toDateString();
-        }
-
         next()
     } catch (err) {
         console.log(err.message)
+        res.json({ message: err.message})
     }
 })
 
