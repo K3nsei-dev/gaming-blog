@@ -70,14 +70,12 @@ app.use((req, res, next) => {
         if (req.method === 'POST') {
                 req.body.createdAt = new Date().toDateString();
                 req.body.updatedAt = null;
-                // res.json({ content: req.body, message: "successfully added data", status_code: 201})
         }
         // for updating objects
         if (req.method === 'PUT') {
             if (req.params) {
                 req.body.createdAt = req.body.createdAt;
                 req.body.updatedAt = new Date().toDateString()
-                // res.json({ message: "successfully updated object", status_code: 201})
             }
         }
 
