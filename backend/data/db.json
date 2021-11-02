@@ -131,37 +131,49 @@
       "body": "Well done! Interesting read!",
       "userId": 1,
       "blogId": "4",
-      "id": 1
+      "id": 1,
+      "createdAt": "Mon Nov 1 2021",
+      "updatedAt": null
     },
     {
       "body": "This is so fascinating! Please upload more posts.",
       "userId": 1,
       "blogId": "5",
-      "id": 2
+      "id": 2,
+      "createdAt": "Mon Nov 1 2021",
+      "updatedAt": null
     },
     {
       "body": "Wow! Please keep it up!",
       "userId": 1,
       "blogId": "6",
-      "id": 3
+      "id": 3,
+      "createdAt": "Mon Nov 1 2021",
+      "updatedAt": null
     },
     {
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "userId": 2,
       "blogId": "1",
-      "id": 4
+      "id": 4,
+      "createdAt": "Mon Nov 1 2021",
+      "updatedAt": null
     },
     {
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "userId": 2,
       "blogId": "2",
-      "id": 5
+      "id": 5,
+      "createdAt": "Mon Nov 1 2021",
+      "updatedAt": null
     },
     {
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "userId": 2,
       "blogId": "3",
-      "id": 6
+      "id": 6,
+      "createdAt": "Mon Nov 1 2021",
+      "updatedAt": null
     }
   ]
 }

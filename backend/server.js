@@ -23,7 +23,7 @@ app.use(auth)
 
 app.use(jsonServer.bodyParser)
 // adding a post 
-app.use((req, next) => {
+app.use((req, res, next) => {
     try {
         // sending an email
         if (req.method === 'POST' && req.path === '/send-email') {
@@ -37,7 +37,7 @@ app.use((req, next) => {
             })
             
             const mailOptions = {
-                from: 'bigbirdonline25@gmail.com',
+                from: 'lcs.gamingblog@gmail.com',
                 to: req.body.email,
                 subject: 'Login Details',
                 html: `<div> 
@@ -49,7 +49,7 @@ app.use((req, next) => {
                 <br>
                 <p>For any queries feel free to contact us...</p>
                 <div>
-                    Email: jeandreross@gmail.com
+                    Email: lcs.gamingblog@gmail.com
                     <br>
                     Tel: 021 555 0080
                 <div>
@@ -61,6 +61,7 @@ app.use((req, next) => {
                     console.log(err)
                 } else {
                     console.log('Email sent: ' + info.response)
+                    
                 }
             })
         }
@@ -88,7 +89,7 @@ app.use((req, next) => {
         
         // editing a comment
         if (req.method === 'PUT' && req.path === '/comments/:id') {
-            console.log(req.path, '/comments/:id');
+            // console.log(req.path, '/comments/:id');
             req.body.updatedAt = new Date().toDateString();
         }
 
