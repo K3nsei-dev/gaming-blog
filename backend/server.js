@@ -1,6 +1,6 @@
 const jsonServer = require('json-server')
 const auth = require('json-server-auth')
-
+const moment = require('moment')
 const app = jsonServer.create()
 const router = jsonServer.router('./data/db.json')
 const nodemailer = require('nodemailer')
@@ -9,6 +9,8 @@ const nodemailer = require('nodemailer')
 app.db = router.db
 
 const middlewares = jsonServer.defaults()
+
+const formattedDate = moment()
 
 const rules = auth.rewriter({
     users: 664,
@@ -68,14 +70,14 @@ app.use((req, res, next) => {
 
         // for adding data
         if (req.method === 'POST') {
-                req.body.createdAt = new Date().toDateString();
+                req.body.createdAt = formattedDate.format('MMMM Do YYYY, h:mm:ss a');
                 req.body.updatedAt = null;
         }
         // for updating objects
         if (req.method === 'PUT') {
             if (req.params) {
                 req.body.createdAt = req.body.createdAt;
-                req.body.updatedAt = new Date().toDateString()
+                req.body.updatedAt = formattedDate.format('MMMM Do YYYY, h:mm:ss a');
             }
         }
 
