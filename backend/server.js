@@ -14,7 +14,6 @@ const formattedDate = moment()
 
 const rules = auth.rewriter({
     users: 664,
-    blogs: 664,
     comments: 664
 })
 
