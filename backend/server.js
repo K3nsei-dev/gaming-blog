@@ -43,12 +43,18 @@ app.use((req, res, next) => {
                 to: req.body.email,
                 subject: 'Login Details',
                 html: `<div> 
-                <h3>Hi ${req.body.fullName},</h3>
-                <br>
+                <div
+                    <h3>Hi ${req.body.fullName},</h3>
+                </div>
+
                 <h4>Your Login Details are as follows:</h4>
                 <p>Username: ${ req.body.email }<p>
                 <p>Password: ${ req.body.password }</p>
                 <br>
+                <img src="https://i.ibb.co/sWpV4B1/logo.jpg" alt="Blog Logo" style="
+                            width: 450px;
+                            height: 200px;
+                        ">
                 <p>For any queries feel free to contact us...</p>
                 <div>
                     Email: lcs.gamingblog@gmail.com
