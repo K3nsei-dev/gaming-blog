@@ -22,7 +22,14 @@ const routes = [
       { path: '', name: 'ViewBlog', component: () => import('pages/ViewBlog.vue') }
     ]
   },
-
+  {
+    path: '/addblog',
+    name: 'addBlog',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', name: 'addPost', component: () => import('pages/Addpost.vue') }
+    ]
+  },
   // Always leave this as last one,
   // but you can also remove it
   {

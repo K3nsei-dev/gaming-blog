@@ -4,6 +4,7 @@ const error = ref(null)
 
 const signin = async (email, password) => {
   error.value = null
+  const router = useRouter()
   try {
     const headersList = {
       Accept: '*/*',
