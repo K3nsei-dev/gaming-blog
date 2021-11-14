@@ -1,0 +1,63 @@
+<template>
+  <div class="editor">
+    <input type="text" v-model="title" id="blogtitle">
+    <input type="text" v-model="image" id="blogimage">
+    <textarea  v-model="body" id="blogbody"></textarea>
+    <input type="text" v-model="tags" id="blogtags">
+    <q-btn label="Submit Changes" @click="editPost" />
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue'
+import getBlog from '../composables/getPost'
+import editBlog from '../composables/editPost'
+import { useRoute } from 'vue-router'
+export default {
+  setup () {
+    const title = ref('')
+    const image = ref('')
+    const body = ref('')
+    const tags = ref('')
+
+    const route = useRoute()
+    const blogId = route.params.id
+
+    console.log(blogId)
+    const { error, blog } = getBlog(blogId)
+
+    const addDetails = async () => {
+      await document.querySelector('#blogtitle').value = blog.title
+      await document.querySelector('#blogimage').value = blog.image
+      await document.querySelector('#blogbody').value = blog.body
+      await document.querySelector('#blogtags').value = blog.tags
+    }
+    if (!error.value) {
+      addDetails()
+      console.log('monkey')
+    }
+
+    const editPost = () => {
+      const post = {
+        title: title,
+        image: image,
+        body: body,
+        tags: tags
+      }
+      try {
+        editBlog(blogId, post)
+        alert('Blog editted succesfully')
+      } catch (err) {
+        console.log(err.message)
+        alert('Blog edit unsuccessful')
+      }
+    }
+
+    return { title, image, body, tags, editPost }
+  }
+}
+</script>
+
+<style>
+
+</style>

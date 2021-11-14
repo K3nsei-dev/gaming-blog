@@ -1,6 +1,11 @@
 import { ref } from 'vue'
 
-const getBlogs = () => {
+const getBlogs = (userId) => {
+  if (userId) {
+    userId = `?userId=${userId}`
+  } else {
+    userId = ''
+  }
   const error = ref(null)
   const blogs = ref(null)
   error.value = null
@@ -11,7 +16,7 @@ const getBlogs = () => {
       'Content-Type': 'application/json',
       Auth: `Bearer ${localStorage.accessToken}`
     }
-    fetch('http://localhost:3000/blogs', {
+    fetch(`http://localhost:3000/blogs${userId}`, {
       headers: headersList
     }).then(res => res.json())
       .then(res => {
