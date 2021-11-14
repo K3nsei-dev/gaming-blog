@@ -17,7 +17,6 @@
   "dependencies": {
     "json-server": "^0.17.0",
     "json-server-auth": "^2.1.0",
-    "moment": "^2.29.1",
     "nodemailer": "^6.7.0"
   }
 }

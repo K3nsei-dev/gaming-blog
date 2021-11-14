@@ -1,14 +1,7 @@
 <template>
   <q-form class="flex column flex-center signup-form">
         <span>Sign Up</span>
-        <i class="far fa-thumbs-up"></i>
-        <p>monkey</p>
-
-        <q-input
-        filled
-        label="Bmail"
-        v-model="bmail"
-      ></q-input>
+        <q-icon name="thumb_up" />
         <q-input
         filled
         label="Email"
@@ -63,10 +56,5 @@ button.q-btn{
   }
   form{
     margin-bottom: 20px;
-  }
-
-  .signup-form i{
-    font-size: 30px;
-    color: black;
   }
 </style>

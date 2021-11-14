@@ -3,12 +3,6 @@
         <span>Sign Up</span>
         <i class="far fa-thumbs-up"></i>
         <p>monkey</p>
-
-        <q-input
-        filled
-        label="Bmail"
-        v-model="bmail"
-      ></q-input>
         <q-input
         filled
         label="Email"

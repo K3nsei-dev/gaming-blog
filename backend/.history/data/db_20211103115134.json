@@ -26,31 +26,10 @@
     },
     {
       "email": "monkey@gmail.com",
-      "password": "$2a$10$gfKn2hb516EjN9gafKmtXO97dDtCrsBEPrYJ4ckPU1kzauT3LK4ha",
-      "fullName": "sarugami",
-      "username": "sarugami",
+      "password": "$2a$10$U2Hsf9hsnMVvWkthZ1.ihew4PrrT1nv4OlNnhgDgpN.3xbseMWHru",
+      "fullName": "monkeyman1",
+      "username": "monkeyman1",
       "id": 4
-    },
-    {
-      "email": "monkey1@gmail.com",
-      "password": "$2a$10$gWDQzb1dw4QGN.UN4Ar7Ju8swGVZErv0p1FMyCg3bZoS1/E5h8S2m",
-      "fullName": "Monkey1",
-      "username": "Monkey-One",
-      "id": 5
-    },
-    {
-      "email": "monkey2@gmail.com",
-      "password": "$2a$10$sbZS.mZ/0MLPziwXxaZIm.16bqXoPIiwc/7aOBrf1XEApDG2nCs8m",
-      "fullName": "Monkey-Two",
-      "username": "Monkey2",
-      "id": 6
-    },
-    {
-      "email": "monkey5@gmail.com",
-      "password": "$2a$10$qDTkVS1hv4uV7lLOxm6BuuIRmfYDFmrWysz4.ucDJTWewyUdCSoGK",
-      "fullName": "monkey-Five",
-      "username": "monkey5",
-      "id": 7
     }
   ],
   "blogs": [
@@ -88,6 +67,17 @@
       "userId": 1
     },
     {
+      "title": "History of Call of Duty",
+      "author": "Jesse Terblanche",
+      "image_header": "https://scufgaming.com/media/wysiwyg/Content/COD_MW/cod_aiming_mobile.jpg",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat lorem aliquam quam malesuada, sed congue turpis imperdiet. Nullam vitae sapien finibus, egestas mi eget, volutpat metus. Nunc pulvinar quis enim non laoreet. Vivamus eleifend ex lorem, non dictum neque scelerisque in. Suspendisse potenti. Proin commodo neque ut pellentesque posuere. Maecenas eget erat et quam cursus pharetra. Vestibulum dapibus facilisis nunc a euismod. Donec placerat, tellus in blandit consectetur, purus diam venenatis nisi, rutrum pulvinar sapien massa a quam. Proin nec ultricies libero. Integer scelerisque eros quis ligula gravida, imperdiet condimentum turpis tincidunt. Integer tincidunt felis nibh, eu tincidunt justo hendrerit nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc scelerisque vel ante nec dictum. Vestibulum et magna varius, finibus erat sed, porttitor eros. Suspendisse venenatis bibendum nunc at ornare. Etiam at ex magna. Suspendisse vestibulum, eros vel feugiat hendrerit, magna velit porta felis, nec aliquam diam lacus sit amet lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "tags": "gaming, cod, fps",
+      "createdAt": "Fri Oct 29 2021",
+      "updatedAt": null,
+      "id": 4,
+      "userId": 2
+    },
+    {
       "title": "The latest review on Fifa 22 in-game music",
       "author": "Jesse Terblanche",
       "image_header": "https://d2skuhm0vrry40.cloudfront.net/2021/articles/2021-09-22-12-32/fifa-22-strikers-header.jpg/EG11/resize/1200x-1/fifa-22-strikers-header.jpg",
@@ -99,15 +89,15 @@
       "userId": 2
     },
     {
-      "title": "Mortal Kombat 3000: A Review",
+      "title": "Mortal Kombat 11: A Review",
+      "author": "Jesse Terblanche",
       "image_header": "https://movies.mxdwn.com/wp-content/uploads/2021/04/Mortal-Kombat-Logo-Header-1.png",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat lorem aliquam quam malesuada, sed congue turpis imperdiet. Nullam vitae sapien finibus, egestas mi eget, volutpat metus. Nunc pulvinar quis enim non laoreet. Vivamus eleifend ex lorem, non dictum neque scelerisque in. Suspendisse potenti. Proin commodo neque ut pellentesque posuere. Maecenas eget erat et quam cursus pharetra. Vestibulum dapibus facilisis nunc a euismod. Donec placerat, tellus in blandit consectetur, purus diam venenatis nisi, rutrum pulvinar sapien massa a quam. Proin nec ultricies libero. Integer scelerisque eros quis ligula gravida, imperdiet condimentum turpis tincidunt. Integer tincidunt felis nibh, eu tincidunt justo hendrerit nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc scelerisque vel ante nec dictum. Vestibulum et magna varius, finibus erat sed, porttitor eros. Suspendisse venenatis bibendum nunc at ornare. Etiam at ex magna. Suspendisse vestibulum, eros vel feugiat hendrerit, magna velit porta felis, nec aliquam diam lacus sit amet lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
       "tags": "gaming, mk11, fighting, pvp",
-      "author": "Jesse Terblanche",
       "createdAt": "Fri Oct 29 2021",
-      "userId": 2,
-      "updatedAt": "November 14th 2021, 4:19:12 pm",
-      "id": 6
+      "updatedAt": null,
+      "id": 6,
+      "userId": 2
     },
     {
       "title": "2021: A game review",
@@ -144,6 +134,12 @@
     }
   ],
   "comments": [
+    {
+      "body": "Well done! Interesting read!",
+      "userId": 1,
+      "blogId": "4",
+      "id": 1
+    },
     {
       "body": "This is so fascinating! Please upload more posts.",
       "userId": 1,

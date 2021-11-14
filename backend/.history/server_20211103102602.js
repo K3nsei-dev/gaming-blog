@@ -1,6 +1,6 @@
 const jsonServer = require('json-server')
 const auth = require('json-server-auth')
-const moment = require('moment')
+
 const app = jsonServer.create()
 const router = jsonServer.router('./data/db.json')
 const nodemailer = require('nodemailer')
@@ -9,8 +9,6 @@ const nodemailer = require('nodemailer')
 app.db = router.db
 
 const middlewares = jsonServer.defaults()
-
-const formattedDate = moment()
 
 const rules = auth.rewriter({
     users: 664,
@@ -24,8 +22,8 @@ app.use(auth)
 
 
 app.use(jsonServer.bodyParser)
-
-app.use((req, res, next) => {
+// adding a post 
+app.use((req, next) => {
     try {
         // sending an email
         if (req.method === 'POST' && req.path === '/send-email') {
@@ -39,7 +37,7 @@ app.use((req, res, next) => {
             })
             
             const mailOptions = {
-                from: 'lcs.gamingblog@gmail.com',
+                from: 'bigbirdonline25@gmail.com',
                 to: req.body.email,
                 subject: 'Login Details',
                 html: `<div> 
@@ -51,7 +49,7 @@ app.use((req, res, next) => {
                 <br>
                 <p>For any queries feel free to contact us...</p>
                 <div>
-                    Email: lcs.gamingblog@gmail.com
+                    Email: jeandreross@gmail.com
                     <br>
                     Tel: 021 555 0080
                 <div>
@@ -63,32 +61,40 @@ app.use((req, res, next) => {
                     console.log(err)
                 } else {
                     console.log('Email sent: ' + info.response)
-                    
                 }
             })
         }
 
-        // for adding data
-        if (req.method === 'POST') {
-                req.body.createdAt = formattedDate.format('MMMM Do YYYY, h:mm:ss a');
+        // adding a post 
+        if (req.method === 'POST' && req.path === '/blogs') {
+                req.body.createdAt = new Date().toDateString();
                 req.body.updatedAt = null;
         }
-        // for updating objects
+
+        // updating a post 
         if (req.method === 'PUT') {
             if (req.params) {
                 req.body.createdAt = req.body.createdAt;
-                req.body.updatedAt = formattedDate.format('MMMM Do YYYY, h:mm:ss a');
+                req.body.updatedAt = new Date().toDateString()
             }
         }
-
-        if (req.method === 'DELETE') {
-            res.json({ message: "successfully deleted data", status_code: 201})
+        
+        // adding a comment 
+        if (req.method === 'POST' && req.path === '/blogs/:id/comments') {
+            console.log(req.path, 'yeah yeah');
+            req.body.createdAt = new Date().toDateString();
+            req.body.updatedAt = null;
+        }
+        
+        // editing a comment
+        if (req.method === 'PUT' && req.path === '/comments/:id') {
+            console.log(req.path, '/comments/:id');
+            req.body.updatedAt = new Date().toDateString();
         }
 
         next()
     } catch (err) {
         console.log(err.message)
-        res.json({ message: err.message})
     }
 })
 
