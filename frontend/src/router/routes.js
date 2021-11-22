@@ -11,7 +11,7 @@ const routes = [
     path: '/home',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Home.vue') }
+      { path: '', name: 'Home', component: () => import('pages/Home.vue') }
     ]
   },
   {
@@ -19,7 +19,15 @@ const routes = [
     name: 'Blog',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', name: 'ViewBlog', component: () => import('pages/ViewBlog.vue') }
+      { path: '', name: 'ViewBlog', component: () => import('pages/ViewBlog.vue') },
+      { path: 'edit', name: 'EditBlog', component: () => import('pages/EditBlog.vue') }
+    ]
+  },
+  {
+    path: '/profile',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', name: 'Profile', component: () => import('pages/Profile.vue') }
     ]
   },
   {

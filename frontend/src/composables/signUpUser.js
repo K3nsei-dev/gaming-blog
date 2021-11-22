@@ -1,7 +1,6 @@
 import { ref } from 'vue'
 
-const error = ref(null)
-const blogs = ref(null)
+const error = ref('')
 
 const signup = async (email, password, fullname, username) => {
   error.value = null
@@ -23,12 +22,12 @@ const signup = async (email, password, fullname, username) => {
     }).then(res => res.json())
       .then(res => {
         error.value = null
-        blogs.value = res
+        window.localStorage.setItem('accessToken', res.accessToken)
+        window.localStorage.setItem('user', JSON.stringify(res.user))
       })
   } catch (err) {
     console.log(err.message)
     error.value = err.message
-    blogs.value = null
   }
 }
 

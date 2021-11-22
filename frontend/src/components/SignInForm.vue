@@ -21,7 +21,7 @@
 import { ref } from 'vue'
 import useSignIn from '../composables/signInUser'
 export default {
-  setup () {
+  setup (props, context) {
     const { error, signin } = useSignIn()
     const email = ref('')
     const password = ref('')
@@ -29,6 +29,7 @@ export default {
       await signin(email.value, password.value)
       console.log('user signed in')
       console.log(localStorage.user)
+      context.emit('signin')
     }
 
     return { email, password, handleSubmit, error }

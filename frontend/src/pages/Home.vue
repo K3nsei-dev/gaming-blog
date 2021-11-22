@@ -1,7 +1,7 @@
 <template>
   <div class="row reverse-wrap homepage-container">
     <div class="col-md-8">
-      <PostsContainer />
+      <PostsContainer  />
     </div>
     <div class="col-auto"> Write blog + Tags/Filter Container </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
-<SinglePost />
-  <router-view />
+  <SinglePost />
+  <!-- comments -->
 </template>
 
 <script>
